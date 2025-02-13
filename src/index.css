@@ -86,3 +86,30 @@
 .-rotate-360 {
   @apply rotate-[-360deg]
 }
+
+/* CSS para a animação */
+.fade-in {
+  opacity: 0;
+  transform: translateX(100px); /* Começa um pouco abaixo */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move para a posição original */
+}
+
+.gradient-text {
+  font-size: 3rem; /* Tamanho do texto */
+  font-weight: bold; /* Negrito */
+  background: linear-gradient(45deg, #0892d0, #9a2fe7); /* Gradiente de duas cores */
+  -webkit-background-clip: text; /* Clip de fundo no texto */
+  color: transparent; /* Cor do texto transparente para mostrar o gradiente */
+  display: inline-block; /* Para garantir que o gradiente se aplique ao texto */
+}
+
+@media (max-width: 676px){
+  .gradient-text {
+    font-size: 2.6rem;
+  }
+}
